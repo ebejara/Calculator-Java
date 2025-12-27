@@ -1,11 +1,11 @@
 package systementor.cidemo1;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 import java.util.logging.Logger;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class CalculatorTest {
 
@@ -18,7 +18,7 @@ class CalculatorTest {
 
 
 
-    private final int devideA = 4;
+    private final int devideA = 8;
     private final int devideB = 2;
 
 
