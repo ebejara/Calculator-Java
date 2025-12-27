@@ -18,7 +18,7 @@ class CalculatorTest {
 
 
 
-    private final int devideA = 8;
+    private final int devideA = 4;
     private final int devideB = 2;
 
 
