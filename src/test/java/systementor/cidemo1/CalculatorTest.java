@@ -28,8 +28,6 @@ class CalculatorTest {
     }
 
 
-
-
     @Test
     void divideWithLogging() {
 
