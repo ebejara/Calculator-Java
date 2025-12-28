@@ -19,7 +19,7 @@ class CalculatorTest {
 
 
     private final int divideA = 4;
-    private final int divideB = 2;
+    private final int divideB = 0;
 
 
     @BeforeEach
@@ -31,18 +31,13 @@ class CalculatorTest {
     @Test
     @SuppressWarnings("unused")
     void divideWithLogging() {
-         
-      
-         logger.info("divide " + divideA + " with " + divideB);
-
+        logger.info("divide " + divideA + " with " + divideB);
         if (divideB == 0){
             logger.severe("divide by zero!!");
             throw new IllegalArgumentException("divide by zero");
         }
-
         int result = calculator.divide(divideA,divideB);
          assertEquals(2,result);
-
     }
 
 
