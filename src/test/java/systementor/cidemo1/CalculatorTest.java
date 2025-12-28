@@ -18,8 +18,8 @@ class CalculatorTest {
 
 
 
-    private final int devideA = 4;
-    private final int devideB = 2;
+    private final int divideA = 4;
+    private final int divideB = 2;
 
 
     @BeforeEach
@@ -29,17 +29,19 @@ class CalculatorTest {
 
 
     @Test
+    @SuppressWarnings("unused")
     void divideWithLogging() {
+         
+      
+         logger.info("divide " + divideA + " with " + divideB);
 
-        logger.info("divide " + devideA + " with " + devideB);
-
-        if (b == 0){
+        if (divideB == 0){
             logger.severe("divide by zero!!");
             throw new IllegalArgumentException("divide by zero");
         }
 
-        int result = devideA / devideB;
-        assertEquals(2,result);
+        int result = calculator.divide(divideA,divideB);
+         assertEquals(2,result);
 
     }
 
@@ -47,10 +49,11 @@ class CalculatorTest {
 
 
     @Test
-    void addShouldReturn3() {
+    void addShouldReturn4() {
         int result = calculator.add(a,b);
         assertEquals(3,result);
-
+          logger.fine("Simple addition - this should work");
+         
     }
 
     @Test
@@ -75,6 +78,7 @@ class CalculatorTest {
 
     @Test
     void divideByZeroThrowsError(){
+        logger.fine("Zero divison Exception is expected here!");
         assertThrows(IllegalArgumentException.class, () -> calculator.divide(5,0));
     }
 
